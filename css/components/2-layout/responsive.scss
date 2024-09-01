@@ -1,0 +1,240 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  h1 {
+    font-size: 100px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  p {
+    &.high {
+      font-size: 35px;
+    }
+    &.ex {
+      font-size: 45px;
+    }
+  }
+  @include nav-xxxlg-xxxxlg;
+  @include hero-xxxlg-xxxxlg;
+  @include news-xxxlg-xxxxlg;
+  @include contact-xxxlg-xxxxlg;
+  @include terms-xxxlg-xxxxlg;
+  @include office-xxxlg-xxxxlg;
+  @include corp-xxxlg-xxxxlg;
+  @include banner-xxxlg-xxxxlg;
+  @include review-xxxlg-xxxxlg;
+  @include career-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 45px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  p {
+    &.ex {
+      font-size: 35px;
+    }
+    &.high {
+      font-size: 30px;
+    }
+    &.big {
+      font-size: 18px;
+    }
+  }
+  body {
+    font-size: 16px;
+  }
+  .highlight {
+    padding: 80px 0;
+  }
+  .button {
+    font-size: 12px;
+    padding: 8px 32px;
+  }
+  @include nav-xlg-xxlg;
+  @include hero-xlg-xxlg;
+  @include news-xlg-xxlg;
+  @include team-xlg-xxlg;
+  @include press-xlg-xxlg;
+  @include contact-xlg-xxlg;
+  @include terms-xlg-xxlg;
+  @include project-xlg-xxlg;
+  @include office-xlg-xxlg;
+  @include property-xlg-xxlg;
+  @include about-xlg-xxlg;
+  @include corp-xlg-xxlg;
+  @include banner-xlg-xxlg;
+  @include review-xlg-xxlg;
+  @include info-xlg-xxlg;
+  @include solution-xlg-xxlg;
+  @include career-xlg-xxlg;
+  @include footer-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h1 {
+    font-size: 70px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .main {
+    padding-top: 72px;
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+  @include team-lg-xlg;
+  @include career-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  p {
+    &.ex {
+      font-size: 30px;
+    }
+    &.high {
+      font-size: 25px;
+    }
+    &.big {
+      font-size: 16px;
+    }
+  }
+  .highlight {
+    padding: 64px 0;
+  }
+  @include hero-md-lg;
+  @include news-md-lg;
+  @include press-md-lg;
+  @include contact-md-lg;
+  @include terms-md-lg;
+  @include project-md-lg;
+  @include office-md-lg;
+  @include property-md-lg;
+  @include about-md-lg;
+  @include corp-md-lg;
+  @include review-md-lg;
+  @include solution-md-lg;
+  @include career-md-lg;
+  @include footer-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 16px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  p {
+    &.ex {
+      font-size: 24px;
+    }
+    &.high {
+      font-size: 20px;
+    }
+  }
+  body {
+    font-size: 14px;
+  }
+  @include nav-sm-md;
+  @include hero-sm-md;
+  @include news-sm-md;
+  @include team-sm-md;
+  @include press-sm-md;
+  @include contact-sm-md;
+  @include terms-sm-md;
+  @include project-sm-md;
+  @include office-sm-md;
+  @include property-sm-md;
+  @include about-sm-md;
+  @include corp-sm-md;
+  @include banner-sm-md;
+  @include review-sm-md;
+  @include info-sm-md;
+  @include solution-sm-md;
+  @include career-sm-md;
+  @include footer-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  h2 {
+    font-size: 25px;
+  }
+  @include hero-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  p {
+    &.ex {
+      font-size: 22px;
+    }
+  }
+  .button {
+    font-size: 10px;
+    padding: 6px 24px;
+  }
+  @include nav-xsm-sm;
+  @include hero-xsm-sm;
+  @include news-xsm-sm;
+  @include team-xsm-sm;
+  @include contact-xsm-sm;
+  @include info-xsm-sm;
+  @include career-xsm-sm;
+  @include footer-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include hero-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include hero-xxxsm-xxsm;
+}

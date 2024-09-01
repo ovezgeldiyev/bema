@@ -1,0 +1,221 @@
+.press {
+  &__inner {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 200px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &-image {
+      border-radius: 24px;
+      padding-bottom: 108%;
+      position: relative;
+      overflow: hidden;
+      &-wrapper {
+        width: calc(55% - 15px);
+        max-width: 660px;
+      }
+      &.grad {
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            134.91deg,
+            #708d77 11.71%,
+            rgba(149, 95, 164, 0.9) 35.7%,
+            rgba(149, 95, 164, 0) 58.69%
+          );
+          mix-blend-mode: multiply;
+          z-index: 1;
+          content: "";
+        }
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &-content {
+      width: calc(45% - 15px);
+      max-width: 604px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 0;
+      h3 {
+        font-weight: 300;
+        margin-bottom: 30px;
+        b {
+          display: block;
+          font-weight: 500;
+        }
+      }
+      p {
+        font-weight: 400;
+        max-width: 490px;
+      }
+    }
+    &-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-link {
+      margin-bottom: 30px;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 136%;
+    }
+    &-col {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 56px;
+      h2 {
+        margin-bottom: 56px;
+      }
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      a {
+        color: $black;
+        margin-bottom: 6px;
+      }
+      p {
+        margin-bottom: 35px;
+        a {
+          color: $main;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+      h4 {
+        margin-bottom: 20px;
+      }
+    }
+    &-foot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &Item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 32px;
+    background-color: $white;
+    border-radius: 24px;
+    margin-bottom: 8px;
+    &:last-child {
+      margin: 0;
+    }
+    &__col {
+      width: calc(100% - 245px);
+      max-width: 801px;
+    }
+    h3 {
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+  }
+}
+// 1180px
+@mixin press-xlg-xxlg {
+  .press {
+    &__inner {
+      &-row {
+        margin-bottom: 150px;
+      }
+      &-col {
+        margin-bottom: 40px;
+        h2 {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin press-md-lg {
+  .press {
+    &__inner {
+      &-col {
+        margin-bottom: 30px;
+        h2 {
+          margin-bottom: 30px;
+        }
+      }
+      &-link {
+        font-size: 19px;
+        margin-bottom: 20px;
+      }
+      &-info {
+        p {
+          margin-bottom: 20px;
+        }
+        h4 {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &Item {
+      padding: 24px;
+      &__col {
+        width: calc(100% - 220px);
+      }
+    }
+  }
+}
+// 750px
+@mixin press-sm-md {
+  .press {
+    &__inner {
+      &-row {
+        flex-direction: column;
+        margin-bottom: 120px;
+      }
+      &-content {
+        width: 100%;
+        max-width: unset;
+        padding: 0;
+        h3 {
+          margin-bottom: 32px;
+        }
+      }
+      &-link {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+      &-info {
+        h4 {
+            margin-bottom: 10px;
+        }
+      }
+      &-image {
+        &-wrapper {
+          width: 100%;
+          max-width: unset;
+          margin-bottom: 24px;
+          order: -1;
+        }
+      }
+    }
+    &Item {
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 24px 16px;
+      &__col {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

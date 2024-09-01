@@ -1,0 +1,14 @@
+.highlight {
+  padding: 120px 0;
+  &.big {
+    p {
+      max-width: 1114px;
+    }
+  }
+  &__inner {
+    p {
+      color: $black;
+      max-width: 945px;
+    }
+  }
+}

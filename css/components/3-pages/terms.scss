@@ -1,0 +1,293 @@
+.terms {
+  padding-top: 230px;
+  &__inner {
+    &-title {
+      margin-bottom: 56px;
+      position: relative;
+      &.stick {
+        top: 100px;
+        height: 70px;
+        position: sticky;
+      }
+      h1 {
+        font-weight: 500;
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 120px;
+      &.sm {
+        margin-bottom: 64px;
+      }
+      &.big {
+        margin-bottom: 200px;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &-col {
+      width: calc(50% - 10px);
+      max-width: 660px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      & > h3 {
+        padding-left: 40px;
+        position: sticky;
+        top: 100px;
+        font-weight: 500;
+        height: 200px;
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    &-content {
+      padding-top: 56px;
+      border-top: 1px solid #d0d0d0;
+    }
+  }
+  &Item {
+    margin-bottom: 64px;
+    &:last-child {
+      margin: 0;
+    }
+    &__info {
+      margin-bottom: 24px;
+      &.big {
+        margin-bottom: 32px;
+      }
+      &.sm {
+        h4 {
+          margin-bottom: 16px;
+        }
+      }
+      &:last-child {
+        margin: 0;
+      }
+      & > p {
+        margin-bottom: 30px;
+        &:last-child {
+          margin: 0;
+        }
+        a {
+          font-weight: 500;
+          color: $main;
+        }
+      }
+    }
+    h4 {
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-weight: 400;
+      &.mobAdd {
+        display: none;
+      }
+    }
+
+    h6 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #8f94ab;
+      margin-bottom: 12px;
+    }
+    ul {
+      padding-left: 20px;
+      &.sm {
+        li {
+          margin: 0;
+        }
+      }
+      li {
+        margin-bottom: 20px;
+        position: relative;
+        font-weight: 400;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+// 1380px
+@mixin terms-xxxlg-xxxxlg {
+  .terms {
+    padding-top: 190px;
+    &__inner {
+      &-row {
+        &.big {
+          margin-bottom: 160px;
+        }
+      }
+      &-content {
+        padding-top: 40px;
+      }
+    }
+  }
+}
+// 1180px
+@mixin terms-xlg-xxlg {
+  .terms {
+    padding-top: 150px;
+    &__inner {
+      &-title {
+        margin-bottom: 40px;
+      }
+      &-row {
+        margin-bottom: 90px;
+        &.sm {
+          margin-bottom: 40px;
+        }
+        &.big {
+          margin-bottom: 120px;
+        }
+      }
+    }
+    &Item {
+      margin-bottom: 40px;
+    }
+  }
+}
+// 930px
+@mixin terms-md-lg {
+  .terms {
+    padding-top: 120px;
+    &__inner {
+      &-title {
+        margin-bottom: 32px;
+      }
+      &-row {
+        margin-bottom: 64px;
+        &.sm {
+          margin-bottom: 30px;
+        }
+        &.big {
+          margin-bottom: 80px;
+        }
+      }
+    }
+    &Item {
+      margin-bottom: 30px;
+    }
+  }
+}
+// 750px
+@mixin terms-sm-md {
+  .terms {
+    padding-top: 104px;
+    &.last {
+      .terms {
+        &__inner {
+          &-col {
+            &:first-child {
+              margin-bottom: 32px;
+            }
+          }
+        }
+      }
+    }
+    &__inner {
+      &-title {
+        &.stick {
+          position: static;
+          height: unset;
+        }
+      }
+      &-row {
+        flex-direction: column;
+        &.sm {
+          margin-bottom: 48px;
+        }
+        &.big {
+          margin-bottom: 120px;
+        }
+      }
+      &-col {
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 48px;
+        &:last-child {
+          margin: 0;
+        }
+        &.mobRem {
+          display: none;
+        }
+        & > h3 {
+          padding-left: 30px;
+          height: unset;
+          position: relative;
+          top: unset;
+        }
+      }
+      &-content {
+        padding-top: 30px;
+      }
+    }
+    &Item {
+      margin-bottom: 48px;
+      &__info {
+        margin-bottom: 48px;
+        &.mobRem {
+          display: none;
+        }
+        &.big {
+          margin-bottom: 48px;
+        }
+      }
+      h6 {
+        font-size: 10px;
+        margin-bottom: 8px;
+      }
+      h4 {
+        margin-bottom: 16px;
+      }
+      p {
+        &.mobAdd {
+          display: block;
+        }
+      }
+      ul {
+        li {
+          padding-left: 18px;
+          margin-bottom: 14px;
+          &::before {
+            width: 5px;
+            height: 5px;
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+// 540px
+@mixin terms-xsm-sm {
+  .terms {
+    &__inner {
+      &-title {
+        margin-bottom: 20px;
+      }
+    }
+    &Item {
+      margin-bottom: 24px;
+      h6 {
+        font-size: 10px;
+        line-height: 100%;
+        margin-bottom: 10px;
+      }
+      p,
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}

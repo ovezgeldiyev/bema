@@ -1,0 +1,185 @@
+h1 {
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 112%;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 112%;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 112%;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 112%;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 112%;
+}
+p {
+  &.ex {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 112%;
+    letter-spacing: -0.02em;
+  }
+  &.high {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 112%;
+  }
+  &.big {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+  }
+}
+.main {
+  overflow: hidden;
+  padding-top: 88px;
+  &.sm {
+    padding: 0;
+    overflow: unset;
+  }
+  &.last {
+    overflow: unset;
+  }
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  border: 1px solid $blue;
+  border-radius: 32px;
+  background-color: transparent;
+  color: $main;
+  padding: 8px 40px;
+  text-transform: uppercase;
+  &:hover {
+    opacity: 1;
+    border-color: $main;
+    background-color: $main;
+    color: $white;
+  }
+}
+.check {
+  &__box {
+    width: 40px;
+    height: 24px;
+    position: relative;
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 2;
+      cursor: pointer;
+      &:checked {
+        & ~ span {
+          border-color: $main;
+          background-color: $main;
+          &::before {
+            transform: translate(15px, -50%);
+            background-color: $white;
+          }
+        }
+        & ~ p {
+          opacity: 0;
+          visibility: hidden;
+          &.active {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $blue;
+      border-radius: 32px;
+      background-color: transparent;
+      transition: 0.3s ease;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        content: "";
+        border-radius: 50%;
+        background-color: $main;
+        transform: translateY(-50%);
+        transition: 0.3s ease;
+      }
+    }
+    p {
+      position: absolute;
+      left: calc(100% + 5px);
+      bottom: 0;
+      font-weight: 500 !important;
+      font-size: 14px;
+      line-height: 100%;
+      color: $main;
+      transition: 0.3s ease;
+      &.active {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes drawLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes drawLine2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% + 32px);
+  }
+}
+@keyframes drawLineVertical {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}

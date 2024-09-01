@@ -1,0 +1,297 @@
+.about {
+  &__inner {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 80px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &-image {
+      border-radius: 24px;
+      padding-bottom: 108%;
+      position: relative;
+      overflow: hidden;
+      &-wrapper {
+        width: calc(55% - 15px);
+        max-width: 660px;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &-content {
+      width: calc(45% - 15px);
+      max-width: 604px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 0;
+      h3 {
+        font-weight: 400;
+        margin-bottom: 30px;
+        b {
+          display: block;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+      }
+      p {
+        font-weight: 400;
+        max-width: 490px;
+      }
+    }
+  }
+}
+// 1180px
+@mixin about-xlg-xxlg {
+  .about {
+    &__inner {
+      &-row {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+// 930px
+@mixin about-md-lg {
+  .about {
+    &__inner {
+      &-row {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
+// 750px
+@mixin about-sm-md {
+  .about {
+    &__inner {
+      &-row {
+        flex-direction: column;
+      }
+      &-content {
+        width: 100%;
+        max-width: unset;
+        padding: 0;
+        h3 {
+          margin-bottom: 32px;
+        }
+      }
+      &-image {
+        &-wrapper {
+          width: 100%;
+          max-width: unset;
+          margin-bottom: 24px;
+          order: -1;
+        }
+      }
+    }
+  }
+}
+.corp {
+  padding: 120px 0 200px;
+  &.uniq {
+    padding: 24px 0;
+    .corp {
+      &__inner {
+        &-row {
+          align-items: flex-start;
+          margin-bottom: 880px;
+        }
+      }
+      &Item {
+        height: calc(100vh - 48px);
+        &__inner {
+          padding-bottom: unset;
+          height: 100%;
+        }
+      }
+    }
+  }
+  &.last {
+    padding: 0;
+  }
+  &__inner {
+    position: relative;
+    &-title {
+      margin-bottom: 56px;
+    }
+    &-row {
+      display: flex;
+      margin: 0 -24px;
+      position: relative;
+    }
+    &-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 80px);
+      max-width: 1164px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    &-text {
+      position: relative;
+      width: calc(75% - 20px);
+      max-width: 945px;
+    }
+    &-wrapper {
+      padding: 0 0 400px 0;
+    }
+  }
+  &Circle {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 104%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    &:hover {
+      opacity: 1;
+      &::before {
+        width: 120%;
+        height: 120%;
+      }
+    }
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: $main;
+      transition: 0.3s ease;
+      content: "";
+    }
+    span {
+      position: relative;
+    }
+  }
+  &Item {
+    width: 25%;
+    &__inner {
+      padding-bottom: 253%;
+      min-height: 573px;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+}
+// 1380px
+@mixin corp-xxxlg-xxxxlg {
+  .corp {
+    &__inner {
+      &-row {
+        margin: 0 -20px;
+      }
+    }
+  }
+}
+// 1180px
+@mixin corp-xlg-xxlg {
+  .corp {
+    padding: 80px 0 150px;
+    &__inner {
+      &-title {
+        margin-bottom: 40px;
+      }
+      &-row {
+        margin: 0 -10px;
+      }
+      &-logo {
+        width: calc(100% - 60px);
+      }
+    }
+    &Circle {
+      width: 180px;
+      height: 180px;
+      font-size: 18px;
+    }
+  }
+}
+// 930px
+@mixin corp-md-lg {
+  .corp {
+    padding: 64px 0 120px;
+    &__inner {
+      &-title {
+        margin-bottom: 32px;
+      }
+      &-logo {
+        width: calc(100% - 40px);
+      }
+    }
+    &Circle {
+      width: 144px;
+      height: 144px;
+      font-size: 15px;
+    }
+  }
+}
+// 750px
+@mixin corp-sm-md {
+  .corp {
+    &.uniq {
+      padding: 16px 0;
+      .corp {
+        &__inner {
+          &-row {
+            margin-bottom: 1150px;
+          }
+          &-text {
+            width: 100%;
+          }
+        }
+        &Item {
+          height: calc(100vh - 32px);
+          &__inner {
+            padding-bottom: unset;
+            height: 100%;
+          }
+        }
+      }
+    }
+    &__inner {
+      &-row {
+        margin: 0 -8px;
+      }
+      &-logo {
+        width: calc(100% - 16px);
+      }
+    }
+    &Item {
+      &__inner {
+        border-radius: 16px;
+      }
+    }
+  }
+}

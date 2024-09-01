@@ -1,0 +1,493 @@
+.project {
+  &__inner {
+    &-title {
+      margin-bottom: 56px;
+      padding-top: 56px;
+      border-top: 1px solid #d0d0d0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 80px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &Banner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    &:last-child {
+      margin: 0;
+    }
+    &__image {
+      width: 100%;
+      height: 100%;
+      padding-bottom: 65%;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      &-wrapper {
+        width: calc(75% - 10px);
+        max-width: 1002px;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &__content {
+      width: calc(25% - 10px);
+      max-width: 318px;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &-top {
+        margin-bottom: 20px;
+      }
+    }
+    h4 {
+      margin-bottom: 24px;
+      b {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 6px;
+      }
+    }
+  }
+  &Item {
+    width: calc(50% - 10px);
+    max-width: 660px;
+    &.sm {
+      max-width: 432px;
+    }
+    &__image {
+      width: 100%;
+      padding-bottom: 65%;
+      position: relative;
+      border-radius: 24px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &__content {
+      max-width: 318px;
+    }
+    h4 {
+      margin-bottom: 24px;
+      b {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+// 1180px
+@mixin project-xlg-xxlg {
+  .project {
+    &__inner {
+      &-title {
+        padding-top: 40px;
+      }
+      &-row {
+        margin-bottom: 60px;
+      }
+    }
+    &Banner {
+      margin-bottom: 60px;
+      &__image {
+        &-wrapper {
+          width: calc(65% - 10px);
+        }
+      }
+      &__content {
+        width: calc(35% - 10px);
+        max-width: unset;
+      }
+    }
+  }
+}
+// 930px
+@mixin project-md-lg {
+  .project {
+    &__inner {
+      &-row {
+        margin-bottom: 48px;
+      }
+    }
+    &Banner {
+      flex-direction: column;
+      margin-bottom: 48px;
+      &__content {
+        width: 100%;
+        max-width: unset;
+        padding: 0;
+        &-top {
+          margin-bottom: 24px;
+        }
+      }
+      &__image {
+        border-radius: 16px;
+        &-wrapper {
+          width: 100%;
+          max-width: unset;
+          margin-bottom: 24px;
+          order: -1;
+        }
+      }
+    }
+    &Item {
+      &__image {
+        border-radius: 16px;
+      }
+    }
+  }
+}
+// 750px
+@mixin project-sm-md {
+  .project {
+    &__inner {
+      &-row {
+        flex-direction: column;
+      }
+      &-title {
+        padding-top: 32px;
+        margin-bottom: 32px;
+      }
+    }
+    &Item {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 48px;
+      &:last-child {
+        margin: 0;
+      }
+      &.sm {
+        max-width: unset;
+      }
+    }
+  }
+}
+.office {
+  &__inner {
+    &-row {
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &Image {
+    width: calc(50% - 10px);
+    max-width: 660px;
+    &.sm {
+      max-width: 433px;
+    }
+    &__inner {
+      width: 100%;
+      position: relative;
+      padding-bottom: 66%;
+      border-radius: 24px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+  &Content {
+    width: calc(50% - 10px);
+    max-width: 500px;
+    p {
+      font-weight: 400;
+    }
+  }
+  &Banner {
+    width: calc(100% + 48px);
+    margin: 0 -24px 80px;
+    &__inner {
+      padding-bottom: 65%;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 520px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+}
+// 1380px
+@mixin office-xxxlg-xxxxlg {
+  .office {
+    &Banner {
+      width: calc(100% + 40px);
+      margin: 0 -20px 80px;
+    }
+  }
+}
+// 1180px
+@mixin office-xlg-xxlg {
+  .office {
+    &__inner {
+      &-row {
+        margin-bottom: 60px;
+      }
+    }
+    &Banner {
+      width: calc(100% + 20px);
+      margin: 0 -10px 60px;
+    }
+  }
+}
+// 930px
+@mixin office-md-lg {
+  .office {
+    &__inner {
+      &-row {
+        margin-bottom: 48px;
+      }
+    }
+    &Banner {
+      margin-bottom: 48px;
+    }
+  }
+}
+// 750px
+@mixin office-sm-md {
+  .office {
+    &__inner {
+      &-row {
+        flex-direction: column;
+      }
+    }
+    &Image {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 48px;
+      &.sm {
+        max-width: unset;
+        margin: 0;
+        order: 2;
+      }
+      &__inner {
+        border-radius: 16px;
+      }
+    }
+    &Content {
+      width: 100%;
+      max-width: unset;
+      order: 2;
+    }
+    &Banner {
+      width: calc(100% + 16px);
+      margin: 0 -8px 48px;
+    }
+  }
+}
+.property {
+  padding-bottom: 200px;
+  &__inner {
+    &-slider {
+      margin: 0 -12px;
+      padding-bottom: 64px;
+    }
+    .slick {
+      &-track {
+        display: flex !important;
+      }
+      &-slide {
+        height: unset !important;
+        margin: 0 12px;
+      }
+      &-list {
+        overflow: visible !important;
+      }
+      &-arrow {
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        top: unset;
+        transform: translate(0);
+        width: 32px;
+        height: 32px;
+        border: 1px solid $blue;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        &:hover {
+          opacity: 1;
+          background-color: $main;
+          &::before {
+            background: url("../images/icons/arrow-right-white.svg") center
+              no-repeat;
+            background-size: contain;
+            transform: translate(-37%, -50%);
+          }
+        }
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          content: "";
+          width: 50%;
+          height: 50%;
+          background: url("../images/icons/arrow-right.svg") center no-repeat;
+          background-size: contain;
+
+          transform: translate(-50%, -50%);
+          transition: 0.3s ease;
+        }
+        &.slick-disabled {
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+      &-prev {
+        left: 12px;
+        &::before {
+          background: url("../images/icons/arrow-left.svg") center no-repeat;
+          background-size: contain;
+        }
+        &:hover {
+          opacity: 1;
+          background-color: $main;
+          &::before {
+            background: url("../images/icons/arrow-left-white.svg") center
+              no-repeat;
+            background-size: contain;
+            transform: translate(-62%, -50%);
+          }
+        }
+      }
+      &-next {
+        right: 12px;
+      }
+    }
+  }
+  &Item {
+    &__inner {
+      width: 100%;
+      padding-bottom: 66%;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+  &Table {
+    padding: 120px 0;
+    &__row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba($black, 0.6);
+      &:first-child {
+        border-top: 1px solid rgba($black, 0.6);
+      }
+      p {
+        width: calc(50% - 10px);
+        b {
+          font-weight: 500;
+        }
+        a {
+          display: block;
+          margin-bottom: 10px;
+          color: $main;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin property-xlg-xxlg {
+  .property {
+    padding-bottom: 150px;
+    &Table {
+      padding: 80px 0;
+    }
+  }
+}
+// 930px
+@mixin property-md-lg {
+  .property {
+    &__inner {
+      &-slider {
+        margin: 0 -10px;
+        padding-bottom: 50px;
+      }
+      .slick {
+        &-slide {
+          margin: 0 10px;
+        }
+        &-prev {
+          left: 10px;
+        }
+        &-next {
+          right: 10px;
+        }
+      }
+    }
+    &Table {
+      padding: 64px 0;
+    }
+  }
+}
+// 750px
+@mixin property-sm-md {
+  .property {
+    padding-bottom: 120px;
+    &__inner {
+      &-slider {
+        padding-bottom: 40px;
+      }
+      .slick {
+        &-arrow {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    &Table {
+      &__row {
+        flex-direction: column;
+        p {
+          width: 100%;
+          margin-bottom: 10px;
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
